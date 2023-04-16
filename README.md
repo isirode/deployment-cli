@@ -44,8 +44,6 @@ Open the [DEVELOPER.md](./DEVELOPER.md) section.
 
 ## License
 
-## License
-
 It is provided with the GNU AFFERO GENERAL PUBLIC LICENSE.
 
 deployment-cli is a project allowing to execute commands for the deployment of applications on local or remote servers.
