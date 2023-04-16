@@ -1,0 +1,15 @@
+name = "my-node-hello-world"
+version = "0.0.1"
+remoteName = "remote-url.com:5000/my-node-hello-world"
+
+dockerUsername = "username"
+dockerPassword = "password"
+
+host = "hostname.com"
+username = "username"
+password = "password"
+port = 22
+
+containerName = "my-node-hello-world"
+
+remoteUrl = "http://hostname.com:3000/"

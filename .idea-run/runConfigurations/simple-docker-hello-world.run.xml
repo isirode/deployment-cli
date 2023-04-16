@@ -1,0 +1,16 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="simple-docker-hello-world" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="com.isirode.deployment.cli.Main" />
+    <module name="deployment-cli.main" />
+    <option name="PROGRAM_PARAMETERS" value="-s examples/simple-docker-hello-world/script.groovy -a name=my-hello-world -a version=0.0.1" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="com.isirode.deployment.cli.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

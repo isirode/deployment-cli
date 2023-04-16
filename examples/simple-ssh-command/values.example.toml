@@ -1,0 +1,5 @@
+host = "host"
+username = "username"
+password = "password"
+port = 22
+directory = "/home/your-username"
