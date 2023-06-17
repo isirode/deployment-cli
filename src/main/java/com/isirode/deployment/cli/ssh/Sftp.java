@@ -13,6 +13,9 @@ public class Sftp {
 
     final Session session;
 
+    // TODO : put dir
+    // TODO : put dir using zipping
+
     public void put(String localFileName, String remoteFileName) throws JSchException, SftpException {
         ChannelSftp channelSftp = null;
         try {

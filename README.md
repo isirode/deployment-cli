@@ -15,7 +15,7 @@ The main purpose is to do the same thinks that a CI/CD server would do, without 
 
 ## Installation
 
-- Download the jar and the .sh script
+- Download the jar and the [.sh script](./deployment-cli.sh)
 - Put them in the same folder, somewhere in your path
 
 If you are using cmder:

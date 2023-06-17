@@ -1,0 +1,1 @@
+java -jar $(dirname "$BASH_SOURCE")/deployment-cli.jar "$@"

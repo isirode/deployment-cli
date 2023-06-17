@@ -107,6 +107,10 @@ There is a list of features below which could be interesting.
 - [ ] Installation
   - [ ] Provide an MSI
   - [ ] Provide a Linux installer
+  - [ ] Fix the .sh system
+    - I think I did not add the jar to the path
+    - bash scripts are difficult
+    - And we cannot use the jar in itself, it will not start from the correct path otherwise
 
 - [ ] CI/CD
   - [ ] Build fatJar after a commit
