@@ -1,0 +1,4 @@
+global_var="global var"
+
+[_global_table]
+my_var="global 2 table var"

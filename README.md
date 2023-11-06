@@ -1,17 +1,22 @@
 # deployment-cli
 
-This project contains various utility tools for deploying executables to a remote server.
+This project allow to execute a Groovy script with data injected into it (using TOML files).
+
+It also contains various utility tools (classes) for deploying executables to a remote server.
 
 You can use it execute commands on the server or locally.
 
 This allow to store the commands being executed, without using a deployment server, like Jenkins.
 
-The main purpose is to do the same thinks that a CI/CD server would do, without the costs.
+The main purpose is to do the same thinks that a CI/CD server would do, without the costs and infrastructure maintenance.
+
+It's useful if you are an indie dev, for instance.
 
 ## Main features
 
 - Pass a deployment Groovy script
 - Pass a file containing values to add in the context of the script
+- Load global (from the user home directory) and per workspace value files
 
 ## Installation
 
@@ -33,6 +38,32 @@ After this, you can run the scripts.
 > java -jar deployment-cli.jar -s test.groovy -v values.private.toml
 
 You can look at [examples](examples/README.md) as well.
+
+## File example
+
+````groovy
+import static com.isirode.deployment.cli.groovy.Utils.getSSHSession
+import com.isirode.deployment.cli.local.Files
+import com.isirode.deployment.cli.ssh.Exec
+import com.isirode.deployment.cli.logger.Logger
+import com.jcraft.jsch.JSch;
+import com.isirode.deployment.cli.logger.JschLogger;
+
+log.info("Starting script")
+
+JSch.setLogger(new JschLogger());
+
+var session = getSSHSession(username, password, host, port)
+
+session.setTimeout(30000);
+
+var exec = new Exec(session)
+exec.with {
+    run "ls -sh ~/"
+}
+
+session.disconnect()
+````
 
 ## Know issues
 

@@ -1,5 +1,13 @@
 # DEVELOPER
 
+## Philosophy
+
+The way I add the features is on a "need to have" basis.
+
+So, if a feature is listed, but I do not need it yet, it will probably not be added.
+
+If you need it, you can contribute or request it (maybe I will take a look).
+
 ## Contributing
 
 You can open a PR if there is a feature you need or a bug to fix.
@@ -25,16 +33,17 @@ There is a list of features below which could be interesting.
 
 - [ ] Value file
   - [x] TOML
-    - [ ] Use multi object file
+    - [x] Use multi object file
   - [ ] HOCON
   - [ ] JSON
+  - [ ] YAML
   - [ ] Multiple files
   - [ ] Use script directory as root
   - [ ] Specify a directory as root
 
 - [ ] Passing arguments
   - [x] Via -a
-  - [ ] Via additional arguments
+  - [ ] Via additional arguments (extra arguments of the initial command)
   - [ ] Boolean arguments
   - [ ] Declare types of elements in the script
   - [ ] Interactive (passwords)
@@ -48,7 +57,7 @@ There is a list of features below which could be interesting.
   - [ ] Copy files
   - [ ] Copy dir
   - [ ] Exec command
-  - [ ] Easy to use working directory
+  - [ ] Easy way to use working directory
 
 - [ ] Docker
   - [ ] Build image
@@ -73,14 +82,24 @@ There is a list of features below which could be interesting.
     - Not updated https://github.com/kevinsawicki/http-request
 
 - [ ] Workspace
-  - [ ] Configurations
-    - [ ] Global
-    - [ ] Workspace
+  - [ ] Values
+    - [x] Global
+    - [x] Workspace
     - [ ] Overwrite root
+    - [ ] Use all files of extension (*.toml)
+  - [ ] Configuration
+    - [ ] Global
+      - [ ] Choose wether or not put the global values in an object or not
+      - [ ] Choose global values object name
+      - [ ] Auto-load workspaces
+      - [ ] Recursive workspaces
+  - [ ] Scripts
+    - Would be common scripts to use with variables
+    - [ ] Pass arguments
   - [ ] Commands
     - [ ] Create ???
     - [ ] Add files ???
-    - FIXME : not sure what I meant
+    - FIXME : not sure what I meant (I think it was pre-made commands)
 
 - [ ] Plugin
   - [ ] Inject Java dependencies
@@ -118,9 +137,9 @@ There is a list of features below which could be interesting.
 - [ ] Logging
   - [x] Logger class
   - [x] Logger object
-  - [ ] Provide a way to log SSH logs
+  - [ ] Provide a way to log (or not) SSH logs
 
-- [ ] Init
+- [ ] Init (to create the files)
   - [ ] Provide a script initializer
   - [ ] Provide a value file initializer
   - [ ] Provide a script that replace values, to create an example file
